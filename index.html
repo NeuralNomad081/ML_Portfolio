@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashwat Pandey - AI/ML Engineer & Data Scientist</title>
+    <meta name="description" content="Shashwat Pandey - AI/ML Engineer and Data Scientist specializing in machine learning, deep learning, and full-stack development">
+    
+    <!-- External CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="three-canvas"></canvas>
+    
+    <!-- Particle System Canvas -->
+    <div id="particles-container"></div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-inner"></div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="loading-text">SP</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-message">Initializing Portfolio...</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                    <span class="logo-text">Shashwat Pandey</span>
+                    <span class="logo-subtitle">AI/ML Engineer</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#contact" class="cta-button">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Shashwat</span>
+                        <span class="title-line">Pandey</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text" data-words='["AI/ML Engineer", "Data Scientist", "Full-Stack Developer", "Problem Solver"]'></span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate about leveraging artificial intelligence and machine learning to create innovative solutions. 
+                        Specialized in end-to-end ML pipelines, LLM applications, and scalable data systems.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-rocket"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-coffee"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="code-title">ai_engineer.py</span>
+                                </div>
+                                <div class="code-body">
+                                    <div class="code-line">
+                                        <span class="code-keyword">class</span> 
+                                        <span class="code-class">AIEngineer</span>:
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-keyword">def</span> 
+                                        <span class="code-function">__init__</span>(self):
+                                    </div>
+                                    <div class="code-line indent-2">
+                                        self.skills = [
+                                    </div>
+                                    <div class="code-line indent-3">
+                                        <span class="code-string">"Machine Learning"</span>,
+                                    </div>
+                                    <div class="code-line indent-3">
+                                        <span class="code-string">"Deep Learning"</span>,
+                                    </div>
+                                    <div class="code-line indent-3">
+                                        <span class="code-string">"LLM Applications"</span>,
+                                    </div>
+                                    <div class="code-line indent-3">
+                                        <span class="code-string">"Data Engineering"</span>
+                                    </div>
+                                    <div class="code-line indent-2">]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll Down</div>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <p>
+                            I'm a passionate AI/ML Engineer and Data Scientist with extensive experience in building 
+                            end-to-end machine learning solutions. Currently pursuing my Bachelor's in Computer Engineering 
+                            at ABES Engineering College, I've gained hands-on experience through internships at leading 
+                            tech companies.
+                        </p>
+                        <p>
+                            My expertise spans from developing RAG-based systems and LLM applications to optimizing 
+                            data pipelines and deploying scalable ML models. I'm particularly interested in the 
+                            intersection of AI and practical business solutions.
+                        </p>
+                    </div>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>AI/ML & Data Science</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">LangChain</span>
+                                <span class="skill-tag">Hugging Face</span>
+                                <span class="skill-tag">OpenAI</span>
+                                <span class="skill-tag">GROQ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Cloud & DevOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Azure</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">Azure DevOps</span>
+                                <span class="skill-tag">Railway</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Web Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Vite</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Data & Databases</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">Redis</span>
+                                <span class="skill-tag">S3</span>
+                                <span class="skill-tag">PowerBI</span>
+                                <span class="skill-tag">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="3">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">APIs Developed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">GB Data Processed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="40">0</div>
+                        <div class="stat-label">% Efficiency Improved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Science Intern</h3>
+                            <span class="company">BiltzenTech Solutions</span>
+                            <span class="location">Bangalore, Karnataka</span>
+                            <span class="period">Jul 2025 - Present</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Managed end-to-end development on Azure DevOps, deploying a RAG-based system for contextual Q&A that improved answer precision by 25% and reduced information retrieval time by 15%</li>
+                                <li>Automated data workflows, reducing manual processing time by 40% across key operational processes by developing sophisticated LangChain agents with LangFlow and Azure ML Foundry</li>
+                                <li>Enhanced data reliability by 60% through meticulous data cleaning procedures, improving decision-making accuracy by 35% via advanced data analysis (PowerBI, Excel Power Query)</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Azure DevOps</span>
+                            <span class="tech-tag">RAG Systems</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">LangFlow</span>
+                            <span class="tech-tag">PowerBI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI/ML Engineering Intern</h3>
+                            <span class="company">Red Panda Games</span>
+                            <span class="location">Bangalore, Karnataka</span>
+                            <span class="period">May 2025 - Jul 2025</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Engineered scalable data pipelines with Hunyuan2.1 3D and GPU-accelerated AWS EC2 instances, increasing processing efficiency by 40% for over 10,000 weekly 3D assets</li>
+                                <li>Optimized task orchestration using Redis and Celery, reducing job latency by 35% and managing complex generative workflows</li>
+                                <li>Enhanced asset quality via advanced prompt engineering, improving output realism by 25% while managing over 500GB of generative data with MongoDB and S3</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">AWS EC2</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Celery</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">3D Generation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI SDE Associate</h3>
+                            <span class="company">Streamly</span>
+                            <span class="location">Dublin, Ireland</span>
+                            <span class="period">Apr 2025 - Jun 2025</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Engineered multi-agent systems with LLMs, enhancing natural language understanding by 40% and improving user interaction accuracy</li>
+                                <li>Developed and deployed over 15 RESTful APIs with FastAPI, streamlining agent communication and reducing system latency by 30%</li>
+                                <li>Implemented desktop automation solutions using showUI, increasing automation efficiency by 25% and reducing manual intervention time by 60%</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">LLMs</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Multi-Agent Systems</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/NeuralNomad081/recipe" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-preview">
+                            <span>Flask</span>
+                            <span>React</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Recipe Generator</h3>
+                        <p class="project-description">
+                            A full-stack recipe generation application with Flask/GROQ backend deployed on Railway with Docker, 
+                            achieving 200ms API response time. Features React/Vite/TypeScript frontend with 98% deployment success rate.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">GROQ</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Railway</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">200ms</span>
+                                <span class="stat-label">API Response</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">98%</span>
+                                <span class="stat-label">Deploy Success</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-preview">
+                            <span>GPT-2</span>
+                            <span>FastAPI</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dialogue Generator</h3>
+                        <p class="project-description">
+                            Fine-tuned GPT-2 model (124M parameters) on custom game dialogue dataset to create an AI-powered 
+                            dialogue generator. Multi-module project with 4 distinct components demonstrating scalable software development.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">GPT-2</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">124M</span>
+                                <span class="stat-label">Parameters</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4</span>
+                                <span class="stat-label">Modules</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-preview">
+                            <span>ML</span>
+                            <span>SMOTE</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Credit Card Fraud Detection</h3>
+                        <p class="project-description">
+                            Developed fraud detection ML pipeline using SMOTE to boost fraud recall by 15%. 
+                            Evaluated models on 284,807 transactions, achieving AUC-ROC >0.95 with 99.9% accuracy.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">SMOTE</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">284K</span>
+                                <span class="stat-label">Transactions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Academic background</p>
+            </div>
+            
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3>Bachelor's of Technology</h3>
+                        <h4>Computer Engineering</h4>
+                        <p class="institution">ABES Engineering College (AKTU)</p>
+                        <p class="location">Ghaziabad, UP</p>
+                        <p class="graduation">Expected Graduation: Jul 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's create something amazing together</h3>
+                    <p>
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:shashwatp011@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">shashwatp011@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+917467888666" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+91 7467888666</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/shashwat-pandey-900a09197" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">LinkedIn</span>
+                                <span class="method-value">Connect with me</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/NeuralNomad081" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">View my code</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Shashwat Pandey. All rights reserved.</p>
+                    <p>Designed & Developed with <i class="fas fa-heart"></i> using cutting-edge web technologies</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/NeuralNomad081" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shashwat-pandey-900a09197" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:shashwatp011@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom Scripts -->
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

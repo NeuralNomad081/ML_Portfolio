@@ -1,0 +1,132 @@
+/* Custom Styles for Portfolio */
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo .logo-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+}
+
+/* About Section Styles */
+.about {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Experience Section Styles */
+.experience {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    margin: 20px 0;
+}
+
+/* Projects Section Styles */
+.projects {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.social-link {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
